@@ -13,12 +13,17 @@
   font-size: 62.5%;
 }
 
-body {
+.body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Roboto', sans-serif;
   display: grid;
   min-height: 100vh;
+}
+
+.body_light {
+  background-color: #F6F6F6;
+  color: var(--bg-color);
 }
 
 button {
@@ -61,4 +66,11 @@ footer {
   border-radius: 9999px;
   width: clamp(10rem, 10rem + 30vw, 22.8rem);
   height: clamp(8rem, 5rem + 10vw, 10.8rem);
+}
+
+#lua,
+#sol {
+  position: absolute;
+  top: 25px;
+  right: 25px;
 }

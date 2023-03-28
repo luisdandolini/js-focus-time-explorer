@@ -11,6 +11,9 @@ const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
 let minutes = Number(minutesDisplay.textContent)
 let timerTimeOut
+const lua = document.querySelector("#lua");
+const sol = document.querySelector("#sol");
+const body = document.querySelector("body")
 
 const timer = Timer({
   minutesDisplay, 
@@ -59,4 +62,16 @@ buttonSet.addEventListener('click', function() {
 
   minutes = newMinutes
   updateTimerDisplay(minutes, 0)
+})
+
+lua.addEventListener('click', () => {
+  lua.classList.add('hide')
+  sol.classList.remove('hide')
+  body.classList.add('body_light')
+})
+
+sol.addEventListener('click', () => {
+  lua.classList.remove('hide')
+  sol.classList.add('hide')
+  body.classList.remove('body_light')
 })
